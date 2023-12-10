@@ -25,11 +25,6 @@ The CI/CD pipeline will start. Expect your changes to display live in 3-4 minute
 
 ## Local development
 
-Install the git commit hooks
-```bash
-pre-commit install && pre-commit install -t pre-push
-```
-
 Run the following command to build the image:
 ```bash
 sudo docker-compose build

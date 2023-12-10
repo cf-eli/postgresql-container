@@ -9,11 +9,11 @@ services:
       POSTGRES_USER: ${PG_USER}
       POSTGRES_PASSWORD: ${PG_PASSWORD}
     volumes:
-      # - eli-db:/var/lib/postgresql/data
+      - eli-db:/var/lib/postgresql/data
       - ./sql/01-init-db.sql:/docker-entrypoint-initdb.d/01-init-db.sql
     ports:
       - 5432:5432
     restart: unless-stopped
-# volumes:
-#   eli-db:
+volumes:
+  eli-db:
 
